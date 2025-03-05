@@ -15,7 +15,7 @@ public class Cookies {
     I am sorting the arrays so a child that could pontetially get a cookie doesn't 
     get skipped over because another child with a higher greed factor takes it
     for example, if you have the two arrays below, then the first child(5) will take 
-    the first cookie(1) in the cookie array and thus it will cause the last child(1) 
+    the first cookie(1) in the cookies array and thus it will cause the last child(1) 
     to not get a cookie, by sorting them you rectify this potential issue
     int[] children = {5,4,3,2,1};
     int[] cookies = {1,2,3,4,6};
@@ -34,7 +34,7 @@ public class Cookies {
     
     the while loop is a better choice than a for loop over the children array becuase 
     if the cookies array is shorter than the children array then you can no longer 
-    give out any cookies and there is not point to keep iterating over all of the 
+    give out any cookies and there is no point to keep iterating over all of the 
     children
     */
     while(cookieIndex <= cookieLen && currentChild <= childrenLen) {
