@@ -31,6 +31,11 @@ public class Cookies {
     
     /* loop over both the children array and the cookies array and stop once you have
     reached the end of one of the arrays if they are not the same length
+    
+    the while loop is a better choice than a for loop over the children array becuase 
+    if the cookies array is shorter than the children array then you can no longer 
+    give out any cookies and there is not point to keep iterating over all of the 
+    children
     */
     while(cookieIndex <= cookieLen && currentChild <= childrenLen) {
       if(children[currentChild] >= cookies[cookieIndex]) {
