@@ -25,24 +25,20 @@ public class Cookies {
     
     int cookiesGiven = 0; // number of cookies in total given out to children
     int cookieIndex = 0; // pointer for cookie array
-    int currentChild = 0; // pointer for children array
     int cookieLen = cookies.length - 1; // last index of cookie array
-    int childrenLen = children.length - 1; // last index children array
     
     /* loop over both the children array and the cookies array and stop once you have
     reached the end of one of the arrays if they are not the same length
-    
-    the while loop is a better choice than a for loop over the children array becuase 
-    if the cookies array is shorter than the children array then you can no longer 
-    give out any cookies and there is no point to keep iterating over all of the 
-    children
     */
-    while(cookieIndex <= cookieLen && currentChild <= childrenLen) {
-      if(children[currentChild] >= cookies[cookieIndex]) {
+    for(int i = 0; i < children.length; i++) {
+      // if we run out of cookies (reach the end of the cookie array)
+      if(cookieIndex > cookieLen) {
+        break;
+      }
+      if(children[i] >= cookies[cookieIndex]) {
         cookiesGiven++; // increment to increase the cookies given out to children 
         cookieIndex++; // increment to move on to the next cookies
       }
-      currentChild++; // increment to move on to the next child
     }
     
     return cookiesGiven;
