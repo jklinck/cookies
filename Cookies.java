@@ -37,7 +37,7 @@ public class Cookies {
       }
       if(children[i] >= cookies[cookieIndex]) {
         cookiesGiven++; // increment to increase the cookies given out to children 
-        cookieIndex++; // increment to move on to the next cookies
+        cookieIndex++; // increment to move on to the next cookies element
       }
     }
     
